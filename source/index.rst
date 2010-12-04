@@ -8,7 +8,7 @@ symfony1.4でview.ymlの拡張を行う
 
 .. _`@ooharabucyou`: http://twitter.com/ooharabucyou
 
-`Symfony Advent 2010 <http://www.symfony.gr.jp/adventcalendar/2010>`_ の5日目です。
+`Symfony アドベントカレンダー2010 <http://www.symfony.gr.jp/adventcalendar/2010>`_ の5日目です。
 
 `<-4日目`_ **5日目(今ここ)** 6日目->
 
@@ -226,6 +226,8 @@ sfConfigに **flag** という設定として書きこむという簡単な拡�
 この情報が誰かの役にたったのならば嬉しいです。
 
 次は hidenorigoto さんがやるようです。楽しみですね!
+
+別で進行中の `OpenPNE3.6 Advent Calendar <http://ex.bucyou.net/op36/>`_ も応援してください！
 
 
 Symfony Advent 2010であなたの記事を公開してみませんか？

@@ -98,7 +98,7 @@ view.yml の デフォルトの Configuration Handler を少し覗きます。
 とりあえず例なので、 view.yml に記述された **flag** の設定値を取り出し、
 sfConfigに **flag** という設定として書きこむという簡単な拡張を書きます。
 
-*plugins/sfViewConfigHandler/lib/config/sfViewConfigHandlerExtra.class.php*
+*plugins/sfViewYamlExtraPlugin/lib/config/sfViewConfigHandlerExtra.class.php*
 
 .. code-block:: php
 
@@ -169,7 +169,7 @@ sfConfigに **flag** という設定として書きこむという簡単な拡�
 
   sfPHPView::configure() を見ると、謎が解けるかもしれません。
 
-*plugins/sfViewConfigHandler/config/config_handlers.yml*
+*plugins/sfViewYamlExtraPlugin/config/config_handlers.yml*
 
 ::
 

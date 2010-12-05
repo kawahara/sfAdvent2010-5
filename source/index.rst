@@ -10,10 +10,10 @@ symfony1.4でview.ymlの拡張を行う
 
 `Symfony アドベントカレンダー2010 <http://www.symfony.gr.jp/adventcalendar/2010>`_ の5日目です。
 
-`<-4日目`_ **5日目(今ここ)** 6日目->
+`<-4日目`_ **5日目(今ここ)** `6日目->`_
 
 .. _`<-4日目`: http://sideport.g.hatena.ne.jp/anatoo/20101204/1291420969
-
+.. _`6日目->`: http://d.hatena.ne.jp/innx_hidenori/20101206/1291562157
 
 概要
 ====

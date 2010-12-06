@@ -21,7 +21,7 @@ symfony1.4でview.ymlの拡張を行う
 symfonyの設定ファイルは柔軟性が高くて好きです。YAMLが気に食わないと思えば
 Configuration Handler を変えることでそれが実現できます。
 
-今回は、元からある *view.yml* の Configuration Handler を魔継承してオレオレルールを作りましょう。
+今回は、元からある ``view.yml`` の Configuration Handler を魔継承してオレオレルールを作りましょう。
 
 実際の作業
 ==========
@@ -31,7 +31,7 @@ view.ymlのConfigHandler
 
 view.yml の デフォルトの Configuration Handler を少し覗きます。
 
-*$sf_symfony_lib_dir/config/sfViewConfigHandler.class.php* より引用
+``$sf_symfony_lib_dir/config/sfViewConfigHandler.class.php`` より引用
 
 .. code-block:: php
 
@@ -80,11 +80,11 @@ view.yml の デフォルトの Configuration Handler を少し覗きます。
 拡張
 ----
 
-プロジェクトの *config/* に *config_handlers.yml* を置いて、独自の Configuration Handler を設定するという手段もありますが、
+プロジェクトの ``config/`` に ``config_handlers.yml`` を置いて、独自の Configuration Handler を設定するという手段もありますが、
 僕は1つプラグインをつくって、いろいろなプロジェクトで使い回しをするというのが大好です。
 つまり、 symfony プラグインを作成することにします。
 
-とりあえず、今回は sfViewYamlExtraPlugin という名前にしました。
+とりあえず、今回は ``sfViewYamlExtraPlugin`` という名前にしました。
 ちゃちゃっと使うディレクトリなどを用意します。
 
 例 ::
@@ -95,10 +95,10 @@ view.yml の デフォルトの Configuration Handler を少し覗きます。
   $ mkdir lib
   $ mkdir lib/config
 
-とりあえず例なので、 view.yml に記述された **flag** の設定値を取り出し、
-sfConfigに **flag** という設定として書きこむという簡単な拡張を書きます。
+とりあえず例なので、 view.yml に記述された ``flag`` の設定値を取り出し、
+``sfConfig`` に ``flag`` という設定として書きこむという簡単な拡張を書きます。
 
-*plugins/sfViewYamlExtraPlugin/lib/config/sfViewConfigHandlerExtra.class.php*
+``plugins/sfViewYamlExtraPlugin/lib/config/sfViewConfigHandlerExtra.class.php``
 
 .. code-block:: php
 
@@ -169,7 +169,7 @@ sfConfigに **flag** という設定として書きこむという簡単な拡�
 
   sfPHPView::configure() を見ると、謎が解けるかもしれません。
 
-*plugins/sfViewYamlExtraPlugin/config/config_handlers.yml*
+``plugins/sfViewYamlExtraPlugin/config/config_handlers.yml``
 
 ::
 
@@ -179,7 +179,7 @@ sfConfigに **flag** という設定として書きこむという簡単な拡�
 
 プラグインを有効にするのを忘れずに。
 
-*config/ProjectConfiguration.class.php* のsetup()中に以下を追加
+``config/ProjectConfiguration.class.php`` のsetup()中に以下を追加
 
 .. code-block:: php-inline
 
@@ -188,7 +188,7 @@ sfConfigに **flag** という設定として書きこむという簡単な拡�
 
 これで、view.yml に対して sfViewConfigHandlerExtra が使われるようになります。
 
-試しに、どこかのモジュールの *config/view.yml* に、
+試しに、どこかのモジュールの ``config/view.yml`` に、
 
 ::
 
